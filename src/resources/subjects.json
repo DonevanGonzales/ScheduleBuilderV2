@@ -1,0 +1,12 @@
+{
+    "subjects" : [
+        {
+            "category": "Math",
+            "title": "Algebra"
+        },
+        {
+            "category": "Science",
+            "title": "Chemistry "
+        }
+    ]  
+}

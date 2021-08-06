@@ -1,0 +1,51 @@
+{
+    "tutors" : [{
+        "firstName": "Donevan",
+        "lastName": "Gonzales",
+        "netID": "dlg143",
+        
+        "subjects": [
+            "CS 1",
+            "CS 2"
+        ],
+    
+        "schedule": [{
+            "monday" : [
+                "12:00 - 7:00",
+                "8:00 - 10:00"
+            ],
+            "wednesday" : [
+                "12:00 - 7:00"
+            ],
+            "friday" : [
+                "12:00 - 7:00"
+            ]
+        }]
+    },
+
+    {
+        "firstName": "Luis",
+        "lastName": "Ortiz",
+        "netID": "leo69",
+        
+        "subjects": [
+            "Algebra",
+            "PreCal",
+            "Cal"
+        ],
+    
+        "schedule": [{
+            "monday" : [
+                "8:00 - 10:00"
+            ],
+            "wednesday" : [
+                "11:00 - 2:30"
+            ],
+            "friday" : [
+                "10:00 - 3:00"
+            ]
+        }]
+    }
+]
+    
+}

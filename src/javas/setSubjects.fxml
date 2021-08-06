@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javas.SetSubjects">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+            <GridPane BorderPane.alignment="CENTER_LEFT">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="299.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="301.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                        <Label fx:id="nmlb" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="30.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="nidlb" GridPane.rowIndex="2" />
+                      <Button fx:id="save1" alignment="CENTER_RIGHT" disable="true" mnemonicParsing="false" onAction="#saveChanges" text="Save Changes" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            </top>
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TabPane fx:id="subjectpane" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <tabs>
+                                <Tab text="Math">
+                                    <content>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="254.0" prefWidth="580.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <content>
+                                                        <FlowPane hgap="50.0" prefWrapLength="0.0" vgap="25.0">
+                                                            <children>
+                                                                <CheckBox fx:id="algebra" mnemonicParsing="false" onAction="#loadToBuffer" text="Algebra 1315" />
+                                                                <CheckBox fx:id="precal" mnemonicParsing="false" onAction="#loadToBuffer" text="Pre-Calculus 2417" />
+                                                                <CheckBox fx:id="cal1" mnemonicParsing="false" onAction="#loadToBuffer" text="Calculus I 2471 " />
+                                                                <CheckBox fx:id="cal2" mnemonicParsing="false" onAction="#loadToBuffer" text="Calculus II 2472" />
+                                                                <CheckBox fx:id="cal3" mnemonicParsing="false" onAction="#loadToBuffer" text="Calculus III 3373" />
+                                                                <CheckBox fx:id="buscal1" mnemonicParsing="false" onAction="#loadToBuffer" text="Business and Economics I 1319" />
+                                                                <CheckBox fx:id="buscal2" mnemonicParsing="false" onAction="#loadToBuffer" text="Business and Economics II 1329" />
+                                                                <CheckBox fx:id="discreet1" mnemonicParsing="false" onAction="#loadToBuffer" text="Discreet I 2358" />
+                                                                <CheckBox fx:id="discreet2" mnemonicParsing="false" onAction="#loadToBuffer" text="Discreet II 3398" />
+                                                                <CheckBox fx:id="linear" mnemonicParsing="false" onAction="#loadToBuffer" text="Linear Algebra 3377" />
+                                                                <CheckBox fx:id="elemstat" mnemonicParsing="false" onAction="#loadToBuffer" text="Elementary Statistics 2328" />
+                                                                <CheckBox fx:id="difeq" mnemonicParsing="false" onAction="#loadToBuffer" text="Differential Equations 3323" />
+                                                            </children>
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                            </padding>
+                                                        </FlowPane>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="Science">
+                                    <content>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="254.0" prefWidth="580.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <content>
+                                                        <FlowPane hgap="50.0" vgap="25.0">
+                                                            <children>
+                                                                <CheckBox fx:id="genchem1" mnemonicParsing="false" onAction="#loadToBuffer" text="General Chemistry I 1341" />
+                                                                <CheckBox fx:id="genchem2" mnemonicParsing="false" onAction="#loadToBuffer" text="General Chemisty II 1342" />
+                                                                <CheckBox fx:id="ochem1" mnemonicParsing="false" onAction="#loadToBuffer" text="Organic Chemistry I 2341" />
+                                                                <CheckBox fx:id="ochem2" mnemonicParsing="false" onAction="#loadToBuffer" text="Organic Chemistry II 2342" />
+                                                                <CheckBox fx:id="funbio" mnemonicParsing="false" onAction="#loadToBuffer" text="Functional Biology 1330" />
+                                                                <CheckBox fx:id="orgbio" mnemonicParsing="false" onAction="#loadToBuffer" text="Organismal Biology 1331" />
+                                                                <CheckBox fx:id="micro" mnemonicParsing="false" onAction="#loadToBuffer" text="Microbiology 2400" />
+                                                                <CheckBox fx:id="gen" mnemonicParsing="false" onAction="#loadToBuffer" text="Genetics 2450" />
+                                                                <CheckBox fx:id="phys1" mnemonicParsing="false" onAction="#loadToBuffer" text="General Physics I 1315" />
+                                                                <CheckBox fx:id="phys2" mnemonicParsing="false" onAction="#loadToBuffer" text="General Physics II 1325" />
+                                                                <CheckBox fx:id="mech" mnemonicParsing="false" onAction="#loadToBuffer" text="Mechanics I 3311" />
+                                                            </children>
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                            </padding>
+                                                        </FlowPane>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="Business">
+                                    <content>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="254.0" prefWidth="580.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <content>
+                                                        <FlowPane hgap="50.0" vgap="25.0">
+                                                            <children>
+                                                                <CheckBox fx:id="fa" mnemonicParsing="false" onAction="#loadToBuffer" text="Intro to Financial Accounting 2361" />
+                                                                <CheckBox fx:id="ma" mnemonicParsing="false" onAction="#loadToBuffer" text="Intro to Managerial Accounting 2362" />
+                                                                <CheckBox fx:id="ia1" mnemonicParsing="false" onAction="#loadToBuffer" text="Intermediate Accounting I 3313" />
+                                                                <CheckBox fx:id="ia2" mnemonicParsing="false" onAction="#loadToBuffer" text="Intermediate Accounting II 3314" />
+                                                                <CheckBox fx:id="bf" mnemonicParsing="false" onAction="#loadToBuffer" text="Business Finance 3312" />
+                                                                <CheckBox fx:id="fm" mnemonicParsing="false" onAction="#loadToBuffer" text="Financial Management 3313" />
+                                                                <CheckBox fx:id="pmicro" mnemonicParsing="false" onAction="#loadToBuffer" text="Principles of Microeconomics 2314" />
+                                                                <CheckBox fx:id="pmacro" mnemonicParsing="false" onAction="#loadToBuffer" text="Principles of Macroeconomics 2315" />
+                                                                <CheckBox fx:id="busstat" mnemonicParsing="false" onAction="#loadToBuffer" text="Business Statistics 2333" />
+                                                            </children>
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                            </padding>
+                                                        </FlowPane>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="Writing">
+                                    <content>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="254.0" prefWidth="580.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <content>
+                                                        <FlowPane hgap="50.0" vgap="25.0">
+                                                            <children>
+                                                                <CheckBox fx:id="writing" mnemonicParsing="false" onAction="#loadToBuffer" text="Writing" />
+                                                            </children>
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                            </padding>
+                                                        </FlowPane>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="Misc">
+                                    <content>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="254.0" prefWidth="580.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <content>
+                                                        <FlowPane hgap="50.0" vgap="25.0">
+                                                            <children>
+                                                                <CheckBox fx:id="span1" mnemonicParsing="false" onAction="#loadToBuffer" text="Intermediate Spanish I 2310" />
+                                                                <CheckBox fx:id="span2" mnemonicParsing="false" onAction="#loadToBuffer" text="Intermediate Spanish II 2320" />
+                                                                <CheckBox fx:id="phil" mnemonicParsing="false" onAction="#loadToBuffer" text="Philosophy 1305" />
+                                                                <CheckBox fx:id="ethics" mnemonicParsing="false" onAction="#loadToBuffer" text="Ethics and Society 1320" />
+                                                                <CheckBox fx:id="logic" mnemonicParsing="false" onAction="#loadToBuffer" text="Elementary Logic 2330" />
+                                                                <CheckBox fx:id="stats" mnemonicParsing="false" onAction="#loadToBuffer" text="Introduction to Statistics 2301" />
+                                                                <CheckBox fx:id="cs1" mnemonicParsing="false" onAction="#loadToBuffer" text="Foundations of Computer Science I 1428" />
+                                                                <CheckBox fx:id="cs2" mnemonicParsing="false" onAction="#loadToBuffer" text="Foundations of Computer Science II 2308" />
+                                                                <CheckBox fx:id="cs3" mnemonicParsing="false" onAction="#loadToBuffer" text="Data Structures and Algorithms 3358" />
+                                                            </children>
+                                                            <padding>
+                                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                            </padding>
+                                                        </FlowPane>
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </TabPane>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>

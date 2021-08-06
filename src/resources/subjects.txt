@@ -1,0 +1,42 @@
+Algebra 1315
+Pre-Calculus 2417
+Calculus I 2471
+Calculus II 2472
+Calculus III 3373
+Business and Economics I 1319
+Business and Economics II 1329
+Discreet I 2358
+Discreet II 3398
+Linear Algebra 3377
+Elementary Statistics 2328
+Differential Equations 3323
+General Chemistry I 1341
+General Chemistry II 1342
+Organic Chemistry I 2341
+Organic Chemistry II 2342
+Functional Biology 1330
+Organismal Biology 1331
+Microbiology 2400
+Genetics 2450
+General Physics I 1315
+General Physics II 1325
+Mechanics I 3311
+Intro to Financial Accounting 2361
+Intro to Managerial Accounting 2362
+Intermediate Accounting I 3313
+Intermediate Accounting II 3314
+Business Finance 3312
+Financial Management 3313
+Principles of Microeconomics 2314
+Principles of Macroeconomics 2315
+Business Statistics 2333
+Writing
+Intermediate Spanish I 2310
+Intermediate Spanish II 2320
+Philosophy 1305
+Ethics and Society 1320
+Elementary Logic 2330
+Behavioral Statistics
+Foundations of Computer Science I 1428
+Foundations of Computer Science II 2308
+Data Structures and Algorithms 3358
