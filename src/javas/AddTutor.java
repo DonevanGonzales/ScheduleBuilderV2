@@ -28,7 +28,7 @@ public class AddTutor implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        database = new File("src/database.csv");
+        database = new File("ScheduleBuilder\\src\\resources\\database.csv");
         try {
             updateList();
         } catch (IOException e) {
@@ -79,7 +79,7 @@ public class AddTutor implements Initializable {
                                 if (count == 0) {
                                     String lineToAdd = fntf.getText().trim() + "," + lntf.getText().trim() + ","
                                             + nidtf.getText().trim().toLowerCase();
-                                    String subjects = ",000000000000000000000000000000000000000000";
+                                    String subjects = ",0000000000000000000000000000000000000000000";
                                     String time = ",000000000000000000000000";
                                     fw.append(lineToAdd);
                                     fw.append(subjects);

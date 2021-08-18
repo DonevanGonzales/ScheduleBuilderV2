@@ -54,6 +54,7 @@ public class SetSubjects implements Initializable {
     public CheckBox cs1;
     public CheckBox cs2;
     public CheckBox cs3;
+    public CheckBox guide;
     public TabPane subjectpane;
     public Button save1;
 
@@ -126,6 +127,7 @@ public class SetSubjects implements Initializable {
         if(a[39] == '1') cs1.setSelected(true);
         if(a[40] == '1') cs2.setSelected(true);
         if(a[41] == '1') cs3.setSelected(true);
+        if(a[42] == '1') guide.setSelected(true);
     }
     
     public void loadToBuffer(ActionEvent actionEvent) {
@@ -176,6 +178,7 @@ public class SetSubjects implements Initializable {
         if(source == cs1) a[39] = (source.isSelected() ? '1' : '0');
         if(source == cs2) a[40] = (source.isSelected() ? '1' : '0');
         if(source == cs3) a[41] = (source.isSelected() ? '1' : '0');
+        if(source == guide) a[42] = (source.isSelected() ? '1' : '0');
 
         buffer = String.valueOf(a);
     }

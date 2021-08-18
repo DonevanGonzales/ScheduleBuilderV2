@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -35,6 +36,7 @@ public class Controller implements Initializable {
     public TextField tfSchedule;
     public ListView<String> listviewSchedules;
     public Button genbtn;
+    public Button genbtn1;
     private String subject;
     public String[] times;
     public TextField searchTF;
@@ -186,8 +188,19 @@ public class Controller implements Initializable {
 
     public void generateSchedule(ActionEvent actionEvent) {
         GenerateDocument generateDocument = new GenerateDocument(listviewSchedules.getSelectionModel().getSelectedItem(),subjects.subjects.indexOf(listviewSchedules.getSelectionModel().getSelectedItem()));
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Successfully created schedule for "+listviewSchedules.getSelectionModel().getSelectedItem());
+        alert.showAndWait();
     }
 
+    public void generateAllSchedules(ActionEvent actionEvent) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        for(String title: listviewSchedules.getItems()){
+            GenerateDocument generateDocument = new GenerateDocument(title,subjects.subjects.indexOf(title));
+        }
+        alert.setContentText("Successfully created All schedules");
+        alert.showAndWait();
+    }
     //for testing purposes
     public void getIndex(MouseEvent mouseEvent) {
         genbtn.setDisable(false);

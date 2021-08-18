@@ -9,29 +9,61 @@ import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 
 import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 public class GenerateDocument {
     public GenerateDocument(String title, int subject) {
         try {
             Tutor tutor = new Tutor();
             tutor.setList();
-
+            SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");  
+            Date date = new Date();
+            System.out.println(formatter.format(date));
             //opens template
             XWPFDocument document = new XWPFDocument(new FileInputStream("ScheduleBuilder/src/resources/Template.docx"));
-
+            
             //sets the title
-            for (XWPFParagraph paragraph : document.getParagraphs()){
-                paragraph.setAlignment(ParagraphAlignment.CENTER);
-                XWPFRun run = paragraph.createRun();
-                run.setFontSize(18);
-                run.setFontFamily("Times New Roman");
-                run.setBold(true);
-                run.setItalic(true);
-                run.setText(title);
-            }
+            // for (XWPFParagraph paragraph : document.getParagraphs()){
+            //     System.out.println(paragraph);
+            //     paragraph.setAlignment(ParagraphAlignment.CENTER);
+            //     XWPFRun run = paragraph.createRun();
+            //     run.setFontSize(18);
+            //     run.setFontFamily("Times New Roman");
+            //     run.setBold(true);
+            //     run.setItalic(true);
+            //     run.setText(title);
+                
+            // }
+
+            List<XWPFParagraph> documents = document.getParagraphs();
+            XWPFRun run = documents.get(0).createRun();
+            run.setFontSize(12);
+            run.setFontFamily("Times New Roman");
+            run.setBold(true);
+            run.setItalic(true);
+            // set current date
+            run.setText(formatter.format(date));
+
+            run = documents.get(1).createRun();
+            run.setFontSize(16);
+            run.setFontFamily("Times New Roman");
+            run.setBold(true);
+            run.setItalic(false);
+            run.setText("Student Learning Assistance Center");
+
+            run = documents.get(2).createRun();
+            run.setFontSize(18);
+            run.setFontFamily("Times New Roman");
+            run.setBold(true);
+            run.setItalic(true);
+            run.setText(title);
 
             //gets access to the first table in the document
-            XWPFTable table = document.getTableArray(0);
+            List<XWPFTable> tables = document.getTables();
+            XWPFTable table = tables.get(0);
+            System.out.println(tables);
 
             for(int timeOfDay = 0; timeOfDay < 24; timeOfDay++){
                 XWPFTableRow someRow = table.getRow(timeOfDay+1);
@@ -61,16 +93,12 @@ public class GenerateDocument {
                 document.write(new FileOutputStream(dir+"\\"+title+".docx"));
                 document.close();
 
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setContentText("Successfully created schedule for "+title);
-                alert.showAndWait();
-
             } catch (FileNotFoundException fe) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("File path was not set, please set it in the Management tab under \"Set Directory\"\n"+fe);
                 alert.showAndWait();
             }
-
+            document.close();
         } catch (Exception e) {
             //TODO make alert stating that the schedule could not be generated
             Alert alert = new Alert(Alert.AlertType.ERROR);

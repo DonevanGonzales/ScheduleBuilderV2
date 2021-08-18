@@ -40,3 +40,4 @@ Behavioral Statistics
 Foundations of Computer Science I 1428
 Foundations of Computer Science II 2308
 Data Structures and Algorithms 3358
+VASC Guide

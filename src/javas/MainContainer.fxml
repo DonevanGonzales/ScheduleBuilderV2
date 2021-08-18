@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-min-width: 1200; -fx-min-height: 800;" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javas.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-min-width: 1200; -fx-min-height: 800;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javas.Controller">
    <children>
       <TabPane layoutX="207.0" layoutY="64.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -34,6 +34,7 @@
                                           <VBox spacing="10.0" BorderPane.alignment="CENTER">
                                              <children>
                                                 <Button fx:id="genbtn" disable="true" mnemonicParsing="false" onAction="#generateSchedule" text="Generate Schedule" />
+                                                <Button fx:id="genbtn1" mnemonicParsing="false" onAction="#generateAllSchedules" text="Generate All Schedules" />
                                              </children>
                                           </VBox>
                                        </right></BorderPane>

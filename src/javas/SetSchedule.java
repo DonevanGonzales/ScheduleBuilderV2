@@ -21,12 +21,13 @@ public class SetSchedule implements Initializable{
     public Label nidlb;
     public GridPane grid;
     public Button save2;
+    public Button clear;
     private File database;
     private String dataSelected;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        database = new File("src/database.csv");
+        database = new File("ScheduleBuilder\\src\\resources\\database.csv");
         try {
             tutor = new Tutor();
         } catch (IOException e) {
@@ -121,6 +122,26 @@ public class SetSchedule implements Initializable{
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    public void clear(ActionEvent actionEvent) throws IOException {
+        CheckBox btn = new CheckBox();
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure?", ButtonType.YES, ButtonType.CANCEL);
+        alert.showAndWait();
+
+        if(alert.getResult() == ButtonType.YES){
+            for(int i = 0; i < buff.length; i++){
+                buff[i] = "000000000000000000000000";
+            }
+            for(int i = 0; i < grid.getChildren().size(); i++){
+                if(grid.getChildren().get(i).getClass() == btn.getClass()){
+                    btn = (CheckBox) grid.getChildren().get(i);
+                    btn.setSelected(false);
+                }
+            
+            }
+            System.out.println(grid.getChildren().size());
         }
     }
 }

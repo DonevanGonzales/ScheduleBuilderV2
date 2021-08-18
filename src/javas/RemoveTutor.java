@@ -26,7 +26,7 @@ public class RemoveTutor implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        database = new File("src/database.csv");
+        database = new File("ScheduleBuilder\\src\\resources\\database.csv");
         try {
             updateList();
         } catch (IOException e) {
